@@ -1,7 +1,8 @@
 package Pokemon;
+
 import java.lang.Math;
 
-public class WaterPokemon extends Pokemon{
+public class WaterPokemon extends Pokemon {
 
     private int attackAmount;
     private boolean canBlowBubbles;
@@ -20,16 +21,17 @@ public class WaterPokemon extends Pokemon{
         int i = (int) (Math.random() * 30);
         System.out.println(i);
 
-        if(i <= 10){
+        if (i <= 10) {
             System.out.println("You missed! See you next time");
-            return;}
+            return;
+        }
         if (canBlowBubbles) {
             System.out.println("I have bubbles to show you!");
             System.out.println("You've been bubbled with " + getAttackAmount() + " bubbles!");
         } else {
-        System.out.println("I cover you with my tears, as i can't blow bubbles!");
-        System.out.println("So you end up with a slap from my tail!");
-            setAttackAmount(attackAmount-1);
+            System.out.println("I cover you with my tears, as i can't blow bubbles!");
+            System.out.println("So you end up with a slap from my tail!");
+            setAttackAmount(attackAmount - 1);
             if (attackAmount <= 0) {
                 System.out.println("You get 5 extra slaps as final attack, sorry!");
                 setAttackAmount(5);
