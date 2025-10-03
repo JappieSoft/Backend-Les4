@@ -6,9 +6,22 @@ public class FirePokemon extends Pokemon {
     private int fireHeat;
 
     public FirePokemon(String name, int healthPoints, String fireType, int fireHeat) {
-        super(name, healthPoints);
+        super(name, healthPoints, "fire");
         this.fireType = fireType;
         this.fireHeat = fireHeat;
+    }
+
+    public void sayFireType() {
+        System.out.println("Hi, my type of fire is: " + getFireType());
+    }
+
+    public void sayFireHeat() {
+        System.out.println("I have " + getFireHeat() + " degrees of fire.");
+    }
+
+    @Override
+    public void sayName() {
+        System.out.println("This FirePokemon goes by the name of: " + getName());
     }
 
     public String getFireType() {
@@ -27,17 +40,12 @@ public class FirePokemon extends Pokemon {
         this.fireHeat = newFireHeat;
     }
 
-  /*  @Override
-    public void sayName(FirePokemon firePokemon) {
-        System.out.println("This FirePokemon goes by the name of: " + firePokemon.getName());
+    @Override
+    public String toString() {
+        return "FirePokemon{" +
+                "name= " + getName() +
+                " fireType='" + fireType + '\'' +
+                ", fireHeat=" + fireHeat +
+                '}';
     }
-*/
-    public void sayFireType(FirePokemon firePokemon) {
-        System.out.println("Hi, my type of fire is: " + firePokemon.getFireType());
-    }
-
-    public void sayFireHeat(FirePokemon firePokemon) {
-        System.out.println("I have " + firePokemon.getFireHeat() + " degrees of fire.");
-    }
-
 }
